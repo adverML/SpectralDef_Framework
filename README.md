@@ -49,13 +49,13 @@ $ conda create --name cuda--11-1-1--pytorch--1-9-0 -f requirements.yml
 $ conda activate cuda--11-1-1--pytorch--1-9-0
 ```
 
-There are two possiblities: Either use our data set with existing adversarial examples, in this case follow the instructions under 'Download' or generate the examples by yourself, by going threw 'Data generation'. For both possibilities conclude with 'Build a detector'.
+There are two possiblities: Either use our data set with existing adversarial examples (not provided yet), in this case follow the instructions under 'Download' or generate the examples by yourself, by going threw 'Data generation'. For both possibilities conclude with 'Build a detector'.
 
 
 ### Download
 
-Download the adversarial examples and their non-adversarial counterparts as well as the trained VGG-16 networks from:
-https://cutt.ly/0jmLTm0 . Extract the folders for the adversarial examples into /data and the models in the main directory. Afterwards continue with 'Build detector'.
+Download the adversarial examples (not provided yet) and their non-adversarial counterparts as well as the trained VGG-16 networks from:
+https://www.kaggle.com/j53t3r/weights . Extract the folders for the adversarial examples into /data/weights and the models in the main directory. Afterwards continue with 'Build detector'.
 
 
 <!-- #### Data download
