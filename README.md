@@ -58,7 +58,7 @@ Download the adversarial examples and their non-adversarial counterparts as well
 https://cutt.ly/0jmLTm0 . Extract the folders for the adversarial examples into /data and the models in the main directory. Afterwards continue with 'Build detector'.
 
 
-#### Data download
+<!-- #### Data download
 
 To get the data directly on your server use wget. For the adversarial examples based on CIFAR-10 use:
 ```sh
@@ -74,21 +74,17 @@ $ rm cif10_adversarial_images.zip
 For adversarial examples based on CIFAR-100 use:
 ```sh
 $ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1NeWUvU63F04aO8k285PJNnfrB21RoI91' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1NeWUvU63F04aO8k285PJNnfrB21RoI91" -O cif100_adversarial_images.zip && rm -rf /tmp/cookies.txt
-```
+``` -->
 
 #### Model download
 
-To get the weights for the VGG-16 netwroks for CIFAR-10 and CIFAR-100 run:
+To get the weights for all networks for CIFAR-10 and CIFAR-100, ImageNet and CelebaHQ download:
 
-```sh
-$ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1b4vyiNIghGV9nwMnMki5mpC6kujLHP11' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1b4vyiNIghGV9nwMnMki5mpC6kujLHP11" -O models.zip && rm -rf /tmp/cookies.txt
-```
 
-then unzip
-```sh
-$ unzip -o models.zip -d .
-$ rm models.zip 
-```
+[Kaggle Download Weights](https://www.kaggle.com/j53t3r/weights)
+
+Copy the weights into `data/weights/`.
+
 
 ### Data generation
 
@@ -102,7 +98,7 @@ or on CIFAR-100
 $ python train_cif100.py
 ```
 
-Copy the pth-files from the checkpoint directory to /models/vgg_cif10.pth or /models/vgg_cif100.pth. In detail: For cif10 go to the folder ./checkpoints; copy the file ckpt.pth to the folder ./models and rename it vgg_cif10.pth. For cif100: Go to the folder ./checkpoints/vgg16; select a folder; copy a file *.pth to the folder ./models and rename it vgg_cif100.pth.
+<!-- Copy the pth-files from the checkpoint directory to /models/vgg_cif10.pth or /models/vgg_cif100.pth. In detail: For cif10 go to the folder ./checkpoints; copy the file ckpt.pth to the folder ./models and rename it vgg_cif10.pth. For cif100: Go to the folder ./checkpoints/vgg16; select a folder; copy a file *.pth to the folder ./models and rename it vgg_cif100.pth. -->
 
 
 The following skript will download the CIFAR-10/100 dataset and extract the CIFAR10/100 images, which are correctly classified by the network by running. Use --net cif10 for CIFAR-10 and --net cif100 for CIFAR-100
