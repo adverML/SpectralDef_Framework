@@ -1,0 +1,56 @@
+README
+
+
+Folder: clean_data
+
+Script: generate_clean_data.py
+Previous script: None
+
+Charactersitics are extracted from normal images and correct classified images. Used: torch.save
+
+run = { run_1, run_2, run_3, run_4 }
+dataset = { cif10, cif100, imagenet, imagenet32, imagenet64, imagenet128, celebaHQ32, celebaHQ64, celebaHQ128 }
+architecture = {wrn}
+depth = 28
+width = 10
+nrclasses = { 10, 25, 50, 75, 100, 250, 1000 }  ... only for imagenet32
+attack = {fgsm, bim, pgd, std, df, cw }
+defense = {InputPFS, InputMFS, LayerPFS, LayerMFS, }
+
+
+Structure:
+
+clean_data
+    <run>
+        <dataset>
+            <architecture>
+                <depth_width_nrclasses>
+                            args.txt   // the parsed arguments
+                        log.txt    // logger.log, is appended; with date etc...
+                        clean_data // the data itself
+
+Example. ./data/clean_data/cif10/wrn_28_10_10/
+
+
+Debug Info:      Accuracy:
+
+[x] cif10,         87%
+[x] cif10vgg,      82%
+[x] cif100,        79%
+[x] cif100vgg,	   72%
+[x] imagenet,      77%
+[] imagenet32, 
+[] imagenet32 10, 
+[] imagenet32 25, 
+[] imagenet32 50, 
+[] imagenet32 75, 
+[] imagenet32 100,
+[] imagenet32 250,  
+[x] imagenet64,    70%
+[x] imagenet128,   79% 
+[x] celebaHQ32,    90%  
+[x] celebaHQ64,    91%   
+[x] celebaHQ128    91%  
+[x] celebaHQ256    86%
+
+... finished

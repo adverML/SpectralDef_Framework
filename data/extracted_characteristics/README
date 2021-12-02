@@ -1,0 +1,63 @@
+README
+
+
+Folder: extracted_characteristics
+
+Script: extract_characteristics.py
+Previous script: attack_autoattack.py or attack_foolbox.py
+
+The data images are stored which classified correctly. Used: torch.save
+
+
+run = { run_1, run_2, run_3, run_4 }
+dataset = { cif10, cif100, imagenet, imagenet32, imagenet64, imagenet128, celebaHQ32, celebaHQ64, celebaHQ128 }
+architecture = {wrn}
+depth = 28
+width = 10
+attack = {fgsm, bim, pgd, std, df, cw }
+defense = {InputPFS, InputMFS, LayerPFS, LayerMFS, }
+
+
+Structure:
+
+extracted_characteristics
+    <run>
+        <dataset>
+            <architecture>
+                <depth_width_nrclasses>
+                    <attacks>
+                        <defense>
+                            args.txt   // the parsed arguments
+                            log.txt    // logger.log, is appended; with date etc...
+                            images     // the data itself
+                            images_adv // the data itself
+
+Example. ./data/extracted_characteristics/run_1/cif10/wrn_28_10_10/fgsm/LayerMFS/
+
+
+Notes:
+
+Debug Info:      Accuracy:
+
+[] cif10,         87%
+[] cif10vgg,      82%
+[] cif100,        79%
+[] imagenet,      77%
+[] imagenet32, 
+[] imagenet32 10, 
+[] imagenet32 25, 
+[] imagenet32 50, 
+[] imagenet32 75, 
+[] imagenet32 100,
+[] imagenet32 250,  
+[] imagenet64,    70%
+[] imagenet128,   79% 
+[] celebaHQ32,    90%   not normalized
+[] celebaHQ64,    91%   not normalized
+[] celebaHQ128    92%   not normalized
+
+... finished
+
+
+
+run_0  git tag extract_withinputimg;  has parameters with input image

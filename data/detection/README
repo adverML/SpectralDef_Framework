@@ -1,0 +1,38 @@
+
+Folder: extracted_characteristics
+
+Script: detect_adversarials.py
+Previous script: extract_characteristics.py
+
+The data images are stored which classified correctly. Used: torch.save
+
+
+run = { run_1, run_2, run_3, run_4 }
+dataset = { cif10, cif100, imagenet, imagenet32, imagenet64, imagenet128, celebaHQ32, celebaHQ64, celebaHQ128 }
+architecture = {wrn}
+depth = 28
+width = 10
+attack = {fgsm, bim, pgd, std, df, cw }
+defense = {InputPFS, InputMFS, LayerPFS, LayerMFS, }
+clf = {LR, RF}
+
+
+Structure:
+
+extracted_characteristics
+    <run>
+        <dataset>
+            <architecture>
+                <depth_width_nrclasses>
+                    <attacks>
+                        <defense>
+                            <clf>
+                                args.txt   // the parsed arguments
+                                log.txt    // logger.log, is appended; with date etc...
+                                <clf>.clf
+
+Example. ./data/detection/run_1/cif10/wrn_28_10_10/fgsm/InputPFS/LR
+
+Notes:
+
+run_0  git tag extract_withinputimg;  has parameters with input image
