@@ -113,21 +113,24 @@ $ python train_cif100.py
 <!-- Copy the pth-files from the checkpoint directory to /models/vgg_cif10.pth or /models/vgg_cif100.pth. In detail: For cif10 go to the folder ./checkpoints; copy the file ckpt.pth to the folder ./models and rename it vgg_cif10.pth. For cif100: Go to the folder ./checkpoints/vgg16; select a folder; copy a file *.pth to the folder ./models and rename it vgg_cif100.pth. -->
 
 
-The following skript will download the CIFAR-10/100 dataset and extract the CIFAR10/100 images, which are correctly classified by the network by running. Use --net cif10 for CIFAR-10 and --net cif100 for CIFAR-100
+The following skript will download the CIFAR-10/100 dataset and extract the CIFAR10/100 (imagenet32, imagenet64, imagenet128, celebAHQ32, ...) images, which are correctly classified by the network by running. Use --net cif10 for CIFAR-10 and --net cif100 for CIFAR-100
 ```sh
+$ # python generate_clean_data.py -h  // for help
 $ python generate_clean_data.py --net cif10
 ```
 
-Then generate the adversarial examples, argument can be fgsm (Fast Gradient Sign Method), bim (Basic Iterative Method), pgd (Projected Gradient Descent), df (Deepfool), cw (Carlini and Wagner), :
+Then generate the adversarial examples, argument can be fgsm (Fast Gradient Sign Method), bim (Basic Iterative Method), pgd (Projected Gradient Descent), std (AutoAttack Standard), df (Deepfool), cw (Carlini and Wagner), :
 ```sh
+$ # python attack.py -h  // for help
 $ python attack.py --attack fgsm
 ```
 
 ### Build detector
 
-First extract the necessary characteristics to train a detector, choose a detector out of InputMFS, InputPFS, LayerMFS, LayerPFS, LID, Mahalanobis adn an attack argument as before: 
+First extract the necessary characteristics to train a detector, choose a detector out of InputMFS (BlackBox - BB), InputPFS, LayerMFS (WhiteBox - WB), LayerPFS, LID, Mahalanobis adn an attack argument as before: 
 
 ```sh
+$ # python extract_characteristics.py -h  // for help
 $ python extract_characteristics.py --attack fgsm --detector InputMFS
 ```
 
@@ -154,6 +157,6 @@ https://github.com/xingjunm/lid_adversarial_subspace_detection.
 * For the Mahalanobis detector we used:
 https://github.com/pokaxpoka/deep_Mahalanobis_detector.
 * For the AutoAttack detector we used:
-https://github.com/adverML/auto-attack/tree/forspectraldefense.
+https://github.com/adverML/auto-attack/tree/forspectraldefense. This one is already added as: `git submodule add -b forspectraldefense  git@github.com:adverML/auto-attack.git submodules/autoattack`
 * Other detectors:
 https://github.com/jayaram-r/adversarial-detection.
