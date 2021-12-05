@@ -90,9 +90,10 @@ These datasets are supported:
  * [ImageNet32x32 t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
  * [ImageNet64x64](https://www.kaggle.com/j53t3r/imagenet64x64)
  * [ImageNet128x128](https://www.kaggle.com/j53t3r/imagenet128x128)
- <!-- * [ImageNet240x240 t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true) -->
  * [ImageNet t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
  * [CelebaHQ 32x32 64x64 128x128 256x256](https://www.kaggle.com/j53t3r/celebahq)
+
+  <!-- * [ImageNet240x240 t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true) -->
 
 
 Download and copy the weights into `data/datasets/`. In case of troubles, adapt the paths in `conf/global_settings.py`.
