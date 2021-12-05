@@ -35,28 +35,6 @@ extracted_characteristics
 Example. ./data/extracted_characteristics/run_1/cif10/wrn_28_10_10/fgsm/LayerMFS/
 
 
-Notes:
-
-Debug Info:      Accuracy:
-
-[] cif10,         87%
-[] cif10vgg,      82%
-[] cif100,        79%
-[] imagenet,      77%
-[] imagenet32, 
-[] imagenet32 10, 
-[] imagenet32 25, 
-[] imagenet32 50, 
-[] imagenet32 75, 
-[] imagenet32 100,
-[] imagenet32 250,  
-[] imagenet64,    70%
-[] imagenet128,   79% 
-[] celebaHQ32,    90%   not normalized
-[] celebaHQ64,    91%   not normalized
-[] celebaHQ128    92%   not normalized
-
-... finished
 
 
 
