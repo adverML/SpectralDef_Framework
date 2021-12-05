@@ -86,9 +86,7 @@ These datasets are supported:
  * [CelebaHQ 32x32 64x64 128x128 256x256](https://www.kaggle.com/j53t3r/celebahq)
 
 
-Download and copy the weights into `data/datasets/`.
-
-In case of troubles, adapt the paths in `conf/global_settings.py`.
+Download and copy the weights into `data/datasets/`. In case of troubles, adapt the paths in `conf/global_settings.py`.
 
 
 #### Model download
@@ -98,7 +96,7 @@ To get the weights for all networks for CIFAR-10 and CIFAR-100, ImageNet and Cel
 1. [Kaggle Download Weights](https://www.kaggle.com/j53t3r/weights)
 2. Copy the weights into `data/weights/`.
 
-In case of troubles, adapt the paths in `conf/global_settings.py`.
+In case of troubles, adapt the paths in `conf/global_settings.py`. You are welcome to create an issue on Github.
 
 ### Data generation
 

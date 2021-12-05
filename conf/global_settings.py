@@ -41,46 +41,88 @@ CELEBA_CSV_PATH = '../pytorch_ipynb/cnn/celeba-' # test_
 
 
 # Weight Paths
-CIF10_CKPT     = './checkpoint/wideresnet_2810/wide_resnet_ckpt.pth'
-CIF10VGG_CKPT  = './checkpoint/vgg16/original/models/vgg_cif10.pth'
-CIF100VGG_CKPT = './checkpoint/vgg16/original/models/vgg_cif100.pth'
-CIF100_CKPT    = './../pytorch-classification/checkpoints/cifar100/wideresnet2810/model_best.pth.tar'
+root_weights = "./data/weights/"
 
-IMAGENET32_CKPT_1000   = './../pytorch-classification/checkpoints/imagenet32/wideresent2810/model_best.pth.tar' # model_best.pth.tar
-IMAGENET32_CKPT_250    = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_250/model_best.pth.tar'
-IMAGENET32_CKPT_100    = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_100/model_best.pth.tar'
-IMAGENET32_CKPT_75     = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_75/model_best.pth.tar'
-IMAGENET32_CKPT_50     = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_50/model_best.pth.tar'
-IMAGENET32_CKPT_25     = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_25/model_best.pth.tar'
-IMAGENET32_CKPT_10     = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_10/model_best.pth.tar'
+CIF10_CKPT     = root_weights + 'CIF10_CKPT/wide_resnet_ckpt.pth'
+CIF10VGG_CKPT  = root_weights + 'CIF10VGG_CKPT/vgg_cif10.pth'
+CIF100VGG_CKPT = root_weights + 'CIF100VGG_CKPT/vgg_cif100.pth'
+CIF100_CKPT    = root_weights + 'CIF100_CKPT/model_best.pth.tar'
 
-IMAGENET64_CKPT_1000   = './../pytorch-classification/checkpoints/imagenet64/wideresent2810/model_best.pth.tar'
-IMAGENET128_CKPT_1000  = './../pytorch-classification/checkpoints/imagenet128/wideresent2810/model_best.pth.tar'
+IMAGENET32_CKPT_1000   = root_weights + 'IMAGENET32_CKPT_1000/model_best.pth.tar' # model_best.pth.tar
+IMAGENET32_CKPT_250    = root_weights + 'IMAGENET32_CKPT_250/model_best.pth.tar'
+IMAGENET32_CKPT_100    = root_weights + 'IMAGENET32_CKPT_100/model_best.pth.tar'
+IMAGENET32_CKPT_75     = root_weights + 'IMAGENET32_CKPT_75/model_best.pth.tar'
+IMAGENET32_CKPT_50     = root_weights + 'IMAGENET32_CKPT_50/model_best.pth.tar'
+IMAGENET32_CKPT_25     = root_weights + 'IMAGENET32_CKPT_25/model_best.pth.tar'
+IMAGENET32_CKPT_10     = root_weights + 'IMAGENET32_CKPT_10/model_best.pth.tar'
+
+IMAGENET64_CKPT_1000   = root_weights + 'IMAGENET64_CKPT_1000/model_best.pth.tar'
+IMAGENET128_CKPT_1000  = root_weights + 'IMAGENET128_CKPT_1000/model_best.pth.tar'
 
 # CELEBAHQ32_CKPT_2   =  './checkpoint/wrn2810/32x32_64_0.1_Smiling_a100_Wednesday_18_August_2021_16h_02m_16s/wrn2810-175-best.pth' # '/home/lorenzp/adversialml/src/src/checkpoint/wrn2810/32x32_64_0.1_Smiling_a100_Wednesday_18_August_2021_16h_02m_16s/wrn2810-175-best.pth'
-CELEBAHQ32_CKPT_2   = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/32x32_128_0.1_Smiling_Thursday_30_September_2021_11h_01m_19s/wrn2810-161-best.pth'
-CELEBAHQ64_CKPT_2   = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/64x64_128_0.1_Smiling_Thursday_30_September_2021_15h_35m_05s/wrn2810-141-best.pth'
-CELEBAHQ128_CKPT_2  = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/128x128_64_0.1_Smiling_Thursday_30_September_2021_15h_37m_55s/wrn2810-140-best.pth' # '/home/lorenzp/adversialml/src/src/checkpoint/wrn2810/128x128_64_0.1_Smiling_a100_Sunday_22_August_2021_13h_01m_15s/wrn2810-80-regular.pth'
+CELEBAHQ32_CKPT_2   = root_weights + 'CELEBAHQ32_CKPT_2/wrn2810-161-best.pth'
+CELEBAHQ64_CKPT_2   = root_weights + 'CELEBAHQ64_CKPT_2/wrn2810-141-best.pth'
+CELEBAHQ128_CKPT_2  = root_weights + 'CELEBAHQ128_CKPT_2/wrn2810-140-best.pth' # '/home/lorenzp/adversialml/src/src/checkpoint/wrn2810/128x128_64_0.1_Smiling_a100_Sunday_22_August_2021_13h_01m_15s/wrn2810-80-regular.pth'
 
-CELEBAHQ32_CKPT_4   = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/32x32_64_0.1_Hair_Color_Thursday_04_November_2021_14h_35m_14s/wrn2810-200-best.pth'
-CELEBAHQ64_CKPT_4   = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/64x64_64_0.1_Hair_Color_Thursday_04_November_2021_17h_25m_16s/wrn2810-171-best.pth'
-CELEBAHQ128_CKPT_4  = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/128x128_64_0.1_Hair_Color_Thursday_04_November_2021_17h_38m_53s/wrn2810-100-regular.pth' # 89%
-CELEBAHQ256_CKPT_4  = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/256x256_24_0.1_Hair_Color_Friday_05_November_2021_16h_44m_36s/wrn2810-70-regular.pth'  # 78%
+CELEBAHQ32_CKPT_4   = root_weights + 'CELEBAHQ32_CKPT_4/wrn2810-200-best.pth'
+CELEBAHQ64_CKPT_4   = root_weights + 'CELEBAHQ64_CKPT_4/wrn2810-171-best.pth'
+CELEBAHQ128_CKPT_4  = root_weights + 'CELEBAHQ128_CKPT_4/wrn2810-100-regular.pth' # 89%
+CELEBAHQ256_CKPT_4  = root_weights + 'CELEBAHQ256_CKPT_4/wrn2810-70-regular.pth'  # 78%
+
+
+# CIF10_CKPT     = './checkpoint/wideresnet_2810/wide_resnet_ckpt.pth'
+# CIF10VGG_CKPT  = './checkpoint/vgg16/original/models/vgg_cif10.pth'
+# CIF100VGG_CKPT = './checkpoint/vgg16/original/models/vgg_cif100.pth'
+# CIF100_CKPT    = './../pytorch-classification/checkpoints/cifar100/wideresnet2810/model_best.pth.tar'
+
+# IMAGENET32_CKPT_1000   = './../pytorch-classification/checkpoints/imagenet32/wideresent2810/model_best.pth.tar' # model_best.pth.tar
+# IMAGENET32_CKPT_250    = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_250/model_best.pth.tar'
+# IMAGENET32_CKPT_100    = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_100/model_best.pth.tar'
+# IMAGENET32_CKPT_75     = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_75/model_best.pth.tar'
+# IMAGENET32_CKPT_50     = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_50/model_best.pth.tar'
+# IMAGENET32_CKPT_25     = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_25/model_best.pth.tar'
+# IMAGENET32_CKPT_10     = './../pytorch-classification/checkpoints/imagenet32/wideresent2810_10/model_best.pth.tar'
+
+# IMAGENET64_CKPT_1000   = './../pytorch-classification/checkpoints/imagenet64/wideresent2810/model_best.pth.tar'
+# IMAGENET128_CKPT_1000  = './../pytorch-classification/checkpoints/imagenet128/wideresent2810/model_best.pth.tar'
+
+# # CELEBAHQ32_CKPT_2   =  './checkpoint/wrn2810/32x32_64_0.1_Smiling_a100_Wednesday_18_August_2021_16h_02m_16s/wrn2810-175-best.pth' # '/home/lorenzp/adversialml/src/src/checkpoint/wrn2810/32x32_64_0.1_Smiling_a100_Wednesday_18_August_2021_16h_02m_16s/wrn2810-175-best.pth'
+# CELEBAHQ32_CKPT_2   = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/32x32_128_0.1_Smiling_Thursday_30_September_2021_11h_01m_19s/wrn2810-161-best.pth'
+# CELEBAHQ64_CKPT_2   = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/64x64_128_0.1_Smiling_Thursday_30_September_2021_15h_35m_05s/wrn2810-141-best.pth'
+# CELEBAHQ128_CKPT_2  = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/128x128_64_0.1_Smiling_Thursday_30_September_2021_15h_37m_55s/wrn2810-140-best.pth' # '/home/lorenzp/adversialml/src/src/checkpoint/wrn2810/128x128_64_0.1_Smiling_a100_Sunday_22_August_2021_13h_01m_15s/wrn2810-80-regular.pth'
+
+# CELEBAHQ32_CKPT_4   = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/32x32_64_0.1_Hair_Color_Thursday_04_November_2021_14h_35m_14s/wrn2810-200-best.pth'
+# CELEBAHQ64_CKPT_4   = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/64x64_64_0.1_Hair_Color_Thursday_04_November_2021_17h_25m_16s/wrn2810-171-best.pth'
+# CELEBAHQ128_CKPT_4  = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/128x128_64_0.1_Hair_Color_Thursday_04_November_2021_17h_38m_53s/wrn2810-100-regular.pth' # 89%
+# CELEBAHQ256_CKPT_4  = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/256x256_24_0.1_Hair_Color_Friday_05_November_2021_16h_44m_36s/wrn2810-70-regular.pth'  # 78%
+
 
 
 # Dataset Paths
-CIF10_PATH         = "./data"
-CIF100_PATH        = "./data"
-IMAGENET_PATH      = "/home/DATA/ITWM/ImageNet"
-IMAGENET32_PATH    = "/home/DATA/ITWM/Imagenet32x32"
-IMAGENET64_PATH    = "/home/DATA/ITWM/Imagenet64x64"
-IMAGENET128_PATH   = "/home/DATA/ITWM/Imagenet128x128"
-IMAGENET240_PATH   = "/home/DATA/ITWM/Imagenet240x240"
-CELEBAHQ32_PATH    = "/home/DATA/ITWM/CelebAHQ/Img/hq/data32x32"
-CELEBAHQ64_PATH    = "/home/DATA/ITWM/CelebAHQ/Img/hq/data64x64"
-CELEBAHQ128_PATH   = "/home/DATA/ITWM/CelebAHQ/Img/hq/data128x128"
-CELEBAHQ256_PATH   = "/home/DATA/ITWM/CelebAHQ/Img/hq/data256x256"
+root_dataset= "./data/datasets/"
+CIF10_PATH         = root_dataset
+CIF100_PATH        = root_dataset
+IMAGENET_PATH      = root_dataset + "ImageNet"
+IMAGENET32_PATH    = root_dataset + "Imagenet32x32"
+IMAGENET64_PATH    = root_dataset + "Imagenet64x64"
+IMAGENET128_PATH   = root_dataset + "Imagenet128x128"
+IMAGENET240_PATH   = root_dataset + "Imagenet240x240"
+CELEBAHQ32_PATH    = root_dataset + "CelebAHQ/Img/hq/data32x32"
+CELEBAHQ64_PATH    = root_dataset + "CelebAHQ/Img/hq/data64x64"
+CELEBAHQ128_PATH   = root_dataset + "CelebAHQ/Img/hq/data128x128"
+CELEBAHQ256_PATH   = root_dataset + "CelebAHQ/Img/hq/data256x256"
 
+# CIF10_PATH         = "./data"
+# CIF100_PATH        = "./data"
+# IMAGENET_PATH      = "/home/DATA/ITWM/ImageNet"
+# IMAGENET32_PATH    = "/home/DATA/ITWM/Imagenet32x32"
+# IMAGENET64_PATH    = "/home/DATA/ITWM/Imagenet64x64"
+# IMAGENET128_PATH   = "/home/DATA/ITWM/Imagenet128x128"
+# IMAGENET240_PATH   = "/home/DATA/ITWM/Imagenet240x240"
+# CELEBAHQ32_PATH    = "/home/DATA/ITWM/CelebAHQ/Img/hq/data32x32"
+# CELEBAHQ64_PATH    = "/home/DATA/ITWM/CelebAHQ/Img/hq/data64x64"
+# CELEBAHQ128_PATH   = "/home/DATA/ITWM/CelebAHQ/Img/hq/data128x128"
+# CELEBAHQ256_PATH   = "/home/DATA/ITWM/CelebAHQ/Img/hq/data256x256"
 
 # Detect Adversarials
 SAVE_CLASSIFIER = False
