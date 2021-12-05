@@ -154,7 +154,7 @@ At the end of the file `evaluation_detection.py` different possibilities are sho
 
 ```sh
 $ python evaluation_detection.py 
-``
+```
 
 Note that: `layers=False` for evaluating the detectors after the the right layers are selected. 
 
