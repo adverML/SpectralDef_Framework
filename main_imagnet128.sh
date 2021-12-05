@@ -182,30 +182,6 @@ exit 0
 # END
 
 
-# TODO List
-# [] Run one time
-#    [x] Generate Clean Data
-#    [x] Generate Attacks
-#    [] Generate Extract Charactersitics
-#    [] Opimtize Params Charactersitics
-#       [] Input MFS PFS
-#       [] Layer MFS PFS
-#       [] LID
-#       [] Mahannobis
-#       [] Statistical Test
-#    [] Generate LR RF
-# [] Copy / Save in file structure
-# [] Create CSV
-
-# [] Variance
-#   [] Run 1
-#   [x] Run 2 
-#       [x] copied
-#   [] Run 3
-
-
-
-
 python -u extract_characteristics.py --net imagenet128 --num_classes 1000  --detector InputMFS --img_size 128  --attack fgsm
 python -u extract_characteristics.py --net imagenet128 --num_classes 1000  --detector InputMFS --img_size 128  --attack bim
 python -u extract_characteristics.py --net imagenet128 --num_classes 1000  --detector InputMFS --img_size 128  --attack std

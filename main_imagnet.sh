@@ -123,26 +123,3 @@ exit 0
 #   just a comment!
 # END
 
-
-# TODO List
-# [] Run one time
-#    [x] Generate Clean Data
-#    [x] Generate Attacks
-#    [] Generate Extract Charactersitics
-#    [] Opimtize Params Charactersitics
-#       [] Input MFS PFS
-#       [] Layer MFS PFS
-#       [] LID
-#       [] Mahannobis
-#       [] Statistical Test
-#    [] Generate LR RF
-# [] Save in file structure
-# [] Create CSV
-
-# [] Variance
-#   [] Run 1
-#   [] Run 2 
-#   [] Run 3
-
-
-# !!! 

@@ -37,11 +37,13 @@ HELP_AA_EPSILONS = "epsilon: 8./255. 4/255, 3/255, 2/255, 1/255, 0.5/255"
 WARN_DIR_EXISTS = "Directory already Exists! Do you want to continue?"
 
 # CSV Paths
-CELEBA_CSV_PATH = '../pytorch_ipynb/cnn/celeba-' # test_
+root_weights = "./data/weights/"
+# CELEBA_CSV_PATH = '../pytorch_ipynb/cnn/celeba-' # test_
+CELEBA_CSV_PATH = root_weights + 'CelebAHQ/cnn/celeba-' # test_
+
 
 
 # Weight Paths
-root_weights = "./data/weights/"
 
 CIF10_CKPT     = root_weights + 'CIF10_CKPT/wide_resnet_ckpt.pth'
 CIF10VGG_CKPT  = root_weights + 'CIF10VGG_CKPT/vgg_cif10.pth'

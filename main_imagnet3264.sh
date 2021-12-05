@@ -254,28 +254,6 @@ detectadversarials
 log_msg "finished"
 exit 0
 
-# : <<'END'
-#   just a comment!
-# END
-
-# TODO List
-# [] Run one time
-#    [x] Generate Clean Data
-#    [x] Generate Attacks
-#    [] Generate Extract Charactersitics
-#    [] Opimtize Params Charactersitics
-#       [] Input MFS PFS
-#       [] Layer MFS PFS
-#       [] LID
-#       [] Mahannobis
-#       [] Statistical Test
-#    [] Generate LR RF
-# [] Save in file structure
-# [] Create CSV
-
-
-
-
 
 python -u detect_adversarials.py --net imagenet32 --num_classes 1000  --wanted_samples 1500 --clf LR --detector InputMFS --attack df
 

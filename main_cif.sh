@@ -1081,18 +1081,3 @@ detectadversarials
 # #-----------------------------------------------------------------------------------------------------------------------------------
 log_msg "finished"
 exit 0
-
-# TODO List
-# [] Run one time
-#    [x] Generate Clean Data
-#    [x] Generate Attacks
-#    [] Generate Extract Charactersitics
-#    [] Opimtize Params Charactersitics
-#       [] Input MFS PFS
-#       [] Layer MFS PFS
-#       [] LID
-#       [] Mahannobis
-#       [] Statistical Test
-#    [] Generate LR RF
-# [] Save in file structure
-# [] Create CSV
