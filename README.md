@@ -3,10 +3,15 @@
 This code belongs to the paper: https://openreview.net/forum?id=8uWOTxbwo-Z, https://arxiv.org/abs/2103.03000, and https://openreview.net/forum?id=aLB3FaqoMBs.
 
 This repositorry is an expansion of https://github.com/paulaharder/SpectralAdversarialDefense, but has some new features:
+ * Several runs can be saved for calculating the variance of the results.
  * Add new attack method: AutoAttack.
  * Add datasets: imagenet32, imagenet64, imagenet128, imagenet, celebahq32, celebahq64, and celebahq128.
  * Add new model: besides VGG-16 we trained a model WideResNet28-10, except for imagenet (used the standard pytorch model.)
+ * Add bash scripts: Automatic starts various combination of input parameters
+ * Add automatic .csv creation from all results.
 
+
+For this framework, please cite:
 ```
 @inproceedings{
 lorenz2022is,
@@ -84,7 +89,7 @@ These datasets are supported:
  * [ImageNet32x32 t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
  * [ImageNet64x64](https://www.kaggle.com/j53t3r/imagenet64x64)
  * [ImageNet128x128](https://www.kaggle.com/j53t3r/imagenet128x128)
- * [ImageNet240x240 t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
+ <!-- * [ImageNet240x240 t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true) -->
  * [ImageNet t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
  * [CelebaHQ 32x32 64x64 128x128 256x256](https://www.kaggle.com/j53t3r/celebahq)
 
@@ -122,7 +127,7 @@ $ # python generate_clean_data.py -h  // for help
 $ python generate_clean_data.py --net cif10
 ```
 
-Then generate the adversarial examples, argument can be fgsm (Fast Gradient Sign Method), bim (Basic Iterative Method), pgd (Projected Gradient Descent), std (AutoAttack Standard), df (Deepfool), cw (Carlini and Wagner), :
+Then generate the adversarial examples, argument can be fgsm (Fast Gradient Sign Method), bim (Basic Iterative Method), pgd (Projected Gradient Descent), [new] std (AutoAttack Standard), df (Deepfool), cw (Carlini and Wagner), :
 ```sh
 $ # python attack.py -h  // for help
 $ python attack.py --attack fgsm
@@ -143,7 +148,15 @@ Then, train a classifier on the characteristics for a specific attack and detect
 $ python detect_adversarials.py --attack fgsm --detector InputMFS
 ```
 
+### [new] Create csv file
 
+At the end of the file `evaluation_detection.py` different possibilities are shown:
+
+```sh
+$ python evaluation_detection.py 
+``
+
+Note that: `layers=False` for evaluating the detectors after the the right layers are selected. 
 
 
 ## Other repositories used

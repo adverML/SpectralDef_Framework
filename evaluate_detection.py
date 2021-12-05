@@ -319,11 +319,11 @@ def copy_run_dest(root='./data/clean_data', net=['cif10', 'cif10vgg', 'cif100', 
 # python -c "import evaluate_detection; evaluate_detection.extract_information(root='./data/clean_data', net=['cif10vgg'], dest='./log_evaluation/cif', run_nr=[1], csv_filename='layers_cif10vgg.csv', whitebox=True)"
 
 
-extract_information(root='./data', net=['cif10vgg'], dest='./data/detection', run_nr=[0], csv_filename='eval_cif10vgg.csv', layers=True)
+# extract_information(root='./data', net=['cif10vgg'], dest='./data/detection', run_nr=[0], csv_filename='eval_cif10vgg.csv', layers=True)
 # extract_information(root='./data', net=['cif10'], dest='./data/detection', run_nr=[0], csv_filename='eval_cif10.csv', layers=True)
 # extract_information(root='./data', net=['cif100'], dest='./data/detection', run_nr=[1], csv_filename='eval_cif100.csv', layers=False)
 
-# extract_information(root='./data', net=['cif10vgg'], dest='./data/detection', run_nr=[1], csv_filename='eval_cif10vgg.csv', layers=False)
+extract_information(root='./data', net=['cif10vgg'], dest='./data/detection', run_nr=[1], csv_filename='eval_cif10vgg.csv', layers=False)
 # extract_information(root='./data', net=['cif100vgg'], dest='./data/detection', run_nr=[1], csv_filename='eval_cif100vgg.csv', layers=False)
 
 
