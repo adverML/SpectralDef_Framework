@@ -2,7 +2,10 @@
 
 This code belongs to the paper: https://openreview.net/forum?id=8uWOTxbwo-Z, https://arxiv.org/abs/2103.03000, and https://openreview.net/forum?id=aLB3FaqoMBs.
 
-This repositorry is an expansion of https://github.com/paulaharder/SpectralAdversarialDefense.
+This repositorry is an expansion of https://github.com/paulaharder/SpectralAdversarialDefense, but has some new features:
+ * Add new attack method: AutoAttack.
+ * Add datasets: imagenet32, imagenet64, imagenet128, imagenet, celebahq32, celebahq64, and celebahq128.
+ * Add new model: besides VGG-16 we trained a model WideResNet28-10, except for imagenet (used the standard pytorch model.)
 
 ```
 @inproceedings{
