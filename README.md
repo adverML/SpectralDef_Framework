@@ -31,10 +31,8 @@ This image shows the pipeline from training a model, generating adversarial exam
 
 * GPUs: A100 (40GB) or Titan V (12GB)
 * CUDA 11
+* Python 3.9.5
 * PyTorch 1-9
-
-
-
 
 
 Clone the repository 
@@ -55,8 +53,7 @@ There are two possiblities: Either use our data set with existing adversarial ex
 ### Download
 
 Download the adversarial examples (not provided yet) and their non-adversarial counterparts as well as the trained VGG-16 networks from:
-https://www.kaggle.com/j53t3r/weights . Extract the folders for the adversarial examples into /data/weights and the models in the main directory. Afterwards continue with 'Build detector'.
-
+https://www.kaggle.com/j53t3r/weights. Extract the folders for the adversarial examples into /data and the models in the main directory. Afterwards continue with 'Build detector'.
 
 <!-- #### Data download
 
@@ -76,15 +73,32 @@ For adversarial examples based on CIFAR-100 use:
 $ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1NeWUvU63F04aO8k285PJNnfrB21RoI91' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1NeWUvU63F04aO8k285PJNnfrB21RoI91" -O cif100_adversarial_images.zip && rm -rf /tmp/cookies.txt
 ``` -->
 
+#### Datasets download
+
+These datasets are supported:
+ * cifar10 
+ * cifar100
+ * [ImageNet32x32 t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
+ * [ImageNet64x64](https://www.kaggle.com/j53t3r/imagenet64x64)
+ * [ImageNet128x128](https://www.kaggle.com/j53t3r/imagenet128x128)
+ * [ImageNet240x240 t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
+ * [ImageNet t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
+ * [CelebaHQ 32x32 64x64 128x128 256x256](https://www.kaggle.com/j53t3r/celebahq)
+
+
+Download and copy the weights into `data/datasets/`.
+
+In case of troubles, adapt the paths in `conf/global_settings.py`.
+
+
 #### Model download
 
-To get the weights for all networks for CIFAR-10 and CIFAR-100, ImageNet and CelebaHQ download:
+To get the weights for all networks for CIFAR-10 and CIFAR-100, ImageNet and CelebaHQ download: 
 
+1. [Kaggle Download Weights](https://www.kaggle.com/j53t3r/weights)
+2. Copy the weights into `data/weights/`.
 
-[Kaggle Download Weights](https://www.kaggle.com/j53t3r/weights)
-
-Copy the weights into `data/weights/`.
-
+In case of troubles, adapt the paths in `conf/global_settings.py`.
 
 ### Data generation
 
@@ -120,12 +134,11 @@ $ python extract_characteristics.py --attack fgsm --detector InputMFS
 ```
 
 
-Then train a classifier on the characteristics for a specific attack and detector:
+Then, train a classifier on the characteristics for a specific attack and detector:
 ```sh
 $ python detect_adversarials.py --attack fgsm --detector InputMFS
 ```
 
-## Remark
 
 
 
