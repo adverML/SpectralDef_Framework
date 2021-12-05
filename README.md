@@ -87,7 +87,7 @@ $ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=downlo
 These datasets are supported:
  * cifar10 
  * cifar100
- * [ImageNet32x32 t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
+ * [ImageNet32x32](https://www.kaggle.com/j53t3r/imagenet32x32)
  * [ImageNet64x64](https://www.kaggle.com/j53t3r/imagenet64x64)
  * [ImageNet128x128](https://www.kaggle.com/j53t3r/imagenet128x128)
  * [ImageNet t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
