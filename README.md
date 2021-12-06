@@ -46,7 +46,7 @@ This image shows the pipeline from training a model, generating adversarial exam
 * GPUs: A100 (40GB) or Titan V (12GB)
 * CUDA 11
 * Python 3.9.5
-* PyTorch 1-9
+* PyTorch 1.9.0
 
 
 Clone the repository 
