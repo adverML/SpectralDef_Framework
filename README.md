@@ -1,14 +1,14 @@
 # Adversrial Machine Learning Benchmarks
 
-This code belongs to the paper: https://openreview.net/forum?id=8uWOTxbwo-Z, https://arxiv.org/abs/2103.03000, and https://openreview.net/forum?id=aLB3FaqoMBs.
+This code belongs to the paper: https://openreview.net/forum?id=8uWOTxbwo-Z and https://openreview.net/forum?id=aLB3FaqoMBs.
 
-This repositorry is an expansion of https://github.com/paulaharder/SpectralAdversarialDefense, but has some new features:
- * Several runs can be saved for calculating the variance of the results.
- * Add new attack method: AutoAttack.
- * Add datasets: imagenet32, imagenet64, imagenet128, imagenet, celebahq32, celebahq64, and celebahq128.
- * Add new model: besides VGG-16 we trained a model WideResNet28-10, except for imagenet (used the standard pytorch model.)
- * Add bash scripts: Automatic starts various combination of input parameters
- * Add automatic .csv creation from all results.
+This repository is an expansion of https://github.com/paulaharder/SpectralAdversarialDefense, but has some new features:
+ * [add] Several runs can be saved for calculating the variance of the results.
+ * [add] new attack method: AutoAttack.
+ * [add] datasets: imagenet32, imagenet64, imagenet128, imagenet, celebahq32, celebahq64, and celebahq128.
+ * [add] new model: besides VGG-16 we trained a model WideResNet28-10, except for imagenet (used the standard pytorch model.)
+ * [add] bash scripts: Automatic starts various combination of input parameters
+ * [add] automatic .csv creation from all results.
 
 
 For this framework, please cite:
