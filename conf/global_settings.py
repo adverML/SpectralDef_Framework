@@ -36,15 +36,9 @@ HELP_AA_EPSILONS = "epsilon: 8./255. 4/255, 3/255, 2/255, 1/255, 0.5/255"
 # Warnings
 WARN_DIR_EXISTS = "Directory already Exists! Do you want to continue?"
 
-# CSV Paths
-root_weights = "./data/weights/"
-# CELEBA_CSV_PATH = '../pytorch_ipynb/cnn/celeba-' # test_
-CELEBA_CSV_PATH = root_weights + 'CelebAHQ/cnn/celeba-' # test_
-
-
 
 # Weight Paths
-
+root_weights = "./data/weights/"
 CIF10_CKPT     = root_weights + 'CIF10_CKPT/wide_resnet_ckpt.pth'
 CIF10VGG_CKPT  = root_weights + 'CIF10VGG_CKPT/vgg_cif10.pth'
 CIF100VGG_CKPT = root_weights + 'CIF100VGG_CKPT/vgg_cif100.pth'
@@ -98,10 +92,12 @@ CELEBAHQ256_CKPT_4  = root_weights + 'CELEBAHQ256_CKPT_4/wrn2810-70-regular.pth'
 # CELEBAHQ128_CKPT_4  = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/128x128_64_0.1_Hair_Color_Thursday_04_November_2021_17h_38m_53s/wrn2810-100-regular.pth' # 89%
 # CELEBAHQ256_CKPT_4  = '/home/lorenzp/adversialml/src/pytorch-CelebAHQ/checkpoint/wrn2810/256x256_24_0.1_Hair_Color_Friday_05_November_2021_16h_44m_36s/wrn2810-70-regular.pth'  # 78%
 
-
+# CSV Paths
+root_dataset= "./data/datasets/"
+# CELEBA_CSV_PATH = '../pytorch_ipynb/cnn/celeba-' # test_
+CELEBA_CSV_PATH = root_dataset + 'CelebAHQ/cnn/celeba-' # test_ # https://www.kaggle.com/j53t3r/celebahq?select=cnn
 
 # Dataset Paths
-root_dataset= "./data/datasets/"
 CIF10_PATH         = root_dataset
 CIF100_PATH        = root_dataset
 IMAGENET_PATH      = root_dataset + "ImageNet"
