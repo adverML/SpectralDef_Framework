@@ -1,8 +1,8 @@
 # Adversrial Machine Learning Benchmarks
 
 This code belongs to the papers: 
- * Is RobustBench/AutoAttack a suitable Benchmark for Adversarial Robustness? - https://openreview.net/forum?id=aLB3FaqoMBs and 
- * Detecting AutoAttack Perturbations in the Frequency Domain - https://openreview.net/forum?id=8uWOTxbwo-Z.
+ * [Is RobustBench/AutoAttack a suitable Benchmark for Adversarial Robustness?](https://openreview.net/forum?id=aLB3FaqoMBs)
+ * [Detecting AutoAttack Perturbations in the Frequency Domain](https://openreview.net/forum?id=8uWOTxbwo-Z)
 
 
 For this framework, please cite:
