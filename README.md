@@ -95,7 +95,7 @@ These datasets are supported:
  * [ImageNet32x32](https://www.kaggle.com/j53t3r/imagenet32x32)
  * [ImageNet64x64](https://www.kaggle.com/j53t3r/imagenet64x64)
  * [ImageNet128x128](https://www.kaggle.com/j53t3r/imagenet128x128)
- * [ImageNet t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true)
+ * [ImageNet 2012](https://image-net.org/challenges/LSVRC/2012/2012-downloads.php)
  * [CelebaHQ 32x32 64x64 128x128 256x256](https://www.kaggle.com/j53t3r/celebahq)
 
   <!-- * [ImageNet240x240 t.b.a.](https://www.kaggle.com/j53t3r/datasets?scroll=true) -->
