@@ -34,11 +34,11 @@ This repository is an expansion of [SpectralAdversarialDefense](https://github.c
 
 This image shows the pipeline from training a model, generating adversarial examples to defend them. 
 
-1. Training: Models are trained. Pre-trained models are provided (WideResNet28-10: cif10, cif100, imagenet32, imagenet64, imagenet128, celebaHQ32, celebaHQ64, celebaHQ128; WideResNet51-2: ImageNet; VGG16: cif10 and cif100)
-2. Generate Clean Data: Only correctly classfied samples are stored via `torch.save`.
-3. Attacks: On this clean data severa atttacks can be executed: FGSM, BIM, AutoAttack (Std), PGD, DF and CW. 
-4. Detect Feature: Detectors try to distinguish between attacked and not-attacked images.
-5. Evaluation Detect: Is the management script for handling several runs and extract the results to one `.csv` file. 
+1. **Training**: Models are trained. Pre-trained models are provided (WideResNet28-10: cif10, cif100, imagenet32, imagenet64, imagenet128, celebaHQ32, celebaHQ64, celebaHQ128; WideResNet51-2: ImageNet; VGG16: cif10 and cif100)
+2. **Generate Clean Data**: Only correctly classfied samples are stored via `torch.save`.
+3. **Attacks**: On this clean data severa atttacks can be executed: FGSM, BIM, AutoAttack (Std), PGD, DF and CW. 
+4. **Detect Feature**: Detectors try to distinguish between attacked and not-attacked images.
+5. **Evaluation Detect**: Is the management script for handling several runs and extract the results to one `.csv` file. 
 
 
 ## Requirements
