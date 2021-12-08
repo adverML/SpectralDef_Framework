@@ -18,6 +18,7 @@ url={https://openreview.net/forum?id=aLB3FaqoMBs}
 ```
 
 This repository is an expansion of [SpectralAdversarialDefense](https://github.com/paulaharder/SpectralAdversarialDefense), but has some **new features**:
+ * Automatic logging.
  * Several runs can be saved for calculating the variance of the results.
  * new attack method: AutoAttack.
  * datasets: imagenet32, imagenet64, imagenet128, imagenet, celebahq32, celebahq64, and celebahq128.
