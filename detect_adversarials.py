@@ -161,7 +161,7 @@ if args.clf == 'LR' and settings.SAVE_CLASSIFIER:
     logger.log("train error: " + str(clf.score(X_train, y_train)) )
     logger.log("test error:  " + str(clf.score(X_test,  y_test)) )
 
-if args.clf == 'RF' and not settings.SAVE_CLASSIFIER:
+if args.clf == 'RF' and settings.SAVE_CLASSIFIER:
     # trees = [100, 200, 300, 400, 500]
     # trees = [600, 700, 800, 900]
     # trees = [ 500 ]
