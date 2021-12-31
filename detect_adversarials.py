@@ -252,11 +252,3 @@ logger.log('RES:, AUC, ACC, PRE, TPR, F1, FNR' )
 logger.log('RES:,' + str(auc) + ',' + str(acc) + ',' + str(pre) + ',' + str(tpr) + ',' + str(f1) + ',' + str(fnr) )
 logger.log('<==========================================================================')
 
-# tn, fp, fn, tp = confusion_matrix(y_test, y_hat, labels=list(range(args.num_classes))).ravel()
-# tn, fp, fn, tp = confusion_matrix(y_test, y_hat, labels=list(range(args.num_classes))).ravel()
-
-aa, bb, cc, dd = perf_measure(y_test, y_hat)
-
-fpr, tpr, _ = roc_curve(y_test, y_hat_pr)
-print("fpr", fpr)
-print("tpr", tpr)
