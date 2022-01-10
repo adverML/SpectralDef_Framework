@@ -55,6 +55,9 @@ if __name__ == '__main__':
     logger = Logger(output_path_dir + os.sep + 'log.txt')
     log_header(logger, args, output_path_dir, sys) # './data/attacks/imagenet32/wrn_28_10/fgsm'
 
+    # check args
+    args = check_args(args, logger)
+    
     #load model
     logger.log('INFO: Load model...')
     model, preprocessing = load_model(args)
