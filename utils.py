@@ -1017,7 +1017,8 @@ def load_test_set(args, preprocessing=None, IS_TRAIN=False):
             data_loader = get_dataloader("SmallImageNet", dataset_dir, is_train=IS_TRAIN, batch_size=args.batch_size, workers=num_workers, 
                             resolution=args.img_size, classes=settings.MAX_CLASSES_IMAGENET, preprocessing=preprocessing, shuffle=shuffle)
         elif args.img_size == 128: 
-            dataset_dir = os.path.join(settings.IMAGENET128_PATH, 'val/box') if IS_TRAIN else  os.path.join(settings.IMAGENET128_PATH, 'train/box')
+            # dataset_dir = os.path.join(settings.IMAGENET128_PATH, 'val/box') if IS_TRAIN else  os.path.join(settings.IMAGENET128_PATH, 'train/box')
+            dataset_dir = os.path.join(settings.IMAGENET128_PATH, 'val_data/box') if IS_TRAIN else  os.path.join(settings.IMAGENET128_PATH, 'train_data/box')
             # normalize = transforms.Normalize(mean=[0.4810, 0.4574, 0.4078], std=[0.2146, 0.2104, 0.2138])
 
             transform_list = [transforms.ToTensor()] + normalization
