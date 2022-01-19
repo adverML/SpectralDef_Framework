@@ -784,7 +784,7 @@ def get_model_info(args):
 
 def check_args(args, logger):
     if args.net_normalization:
-        if not args.attack == 'std' or not args.attack == 'ind':
+        if not args.attack == 'std' and not args.attack == 'ind':
             logger.log("Warning: Net normalization must be switched off!")
             args.net_normalization = False
             logger.log("Warning: Net normalization is switched off now!")
