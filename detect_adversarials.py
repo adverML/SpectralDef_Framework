@@ -158,8 +158,8 @@ if args.clf == 'LR' and settings.SAVE_CLASSIFIER:
     clf = LogisticRegression()
     logger.log(clf)
     clf.fit(X_train,y_train)
-    logger.log("train error: " + str(clf.score(X_train, y_train)) )
-    logger.log("test error:  " + str(clf.score(X_test,  y_test)) )
+    logger.log("train score: " + str(clf.score(X_train, y_train)) )
+    logger.log("test score:  " + str(clf.score(X_test,  y_test)) )
 
 if args.clf == 'RF' and settings.SAVE_CLASSIFIER:
     # trees = [100, 200, 300, 400, 500]
