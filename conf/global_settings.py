@@ -7,6 +7,9 @@ extended by Peter Lorenz
 import os
 from datetime import datetime
 
+
+SHOW_DEBUG = True
+
 #tensorboard log dir
 LOG_DIR = 'runs'
 
