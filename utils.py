@@ -64,9 +64,10 @@ def save_args_to_file(args, path):
     
 
 def get_debug_info(msg):
-    frameinfo = getframeinfo(currentframe())
-    #print(msg, ", filename: ", frameinfo.filename, ", line_nr: ", frameinfo.lineno)
-    print(msg)
+    if settings.SHOW_DEBUG:
+        # frameinfo = getframeinfo(currentframe())
+        # print(msg, ", filename: ", frameinfo.filename, ", line_nr: ", frameinfo.lineno)
+        print(msg)
 
     
 def aa_get_mode(args):
