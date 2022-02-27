@@ -143,13 +143,13 @@ if __name__ == '__main__':
         #setup depending on attack
         if args.attack == 'fgsm':
             attack = FGSM()
-            epsilons = [0.03137254901960784] 
+            epsilons = [8./255.] 
         elif args.attack == 'bim':
             attack = LinfBasicIterativeAttack()
-            epsilons = [0.03137254901960784]
+            epsilons = [8./255.]
         elif args.attack == 'pgd':
             attack = PGD()
-            epsilons = [0.03137254901960784]
+            epsilons = [8./255.]
         elif args.attack == 'df':
             attack = L2DeepFoolAttack()
             epsilons = None
