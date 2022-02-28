@@ -143,13 +143,21 @@ $ python attack.py --attack fgsm
 
 ### Build detector
 
-First extract the necessary characteristics to train a detector, choose a detector out of InputMFS (BlackBox - BB), InputPFS, LayerMFS (WhiteBox - WB), LayerPFS, LID, Mahalanobis adn an attack argument as before: 
+First extract the necessary characteristics to train a detector, choose a detector out of InputMFS (BlackBox - BB), InputPFS, LayerMFS (WhiteBox - WB), LayerPFS, LID, Mahalanobis adn an attack argument as before:
 
+```sh
+######## To Clarify from the Paper
+# InputMFS == BlackBox_MFS
+# InputPFS == BlackBox_PFS
+# LayerMFS == WhiteBox_MFS
+# LayerPFS == WhiteBox_PFS
+```
+
+Execute
 ```sh
 $ # python extract_characteristics.py -h  // for help
 $ python extract_characteristics.py --attack fgsm --detector InputMFS
 ```
-
 
 Then, train a classifier on the characteristics for a specific attack and detector:
 ```sh
