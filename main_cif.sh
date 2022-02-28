@@ -1,5 +1,11 @@
 #!/bin/bash
 
+######## To Clarify from the Paper
+# InputMFS == BlackBox_MFS
+# InputPFS == BlackBox_PFS
+# LayerMFS == WhiteBox_MFS
+# LayerPFS == WhiteBox_PFS
+
 function log_msg {
   echo  "`date` $@"
 }
