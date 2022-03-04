@@ -158,10 +158,10 @@ if args.clf == 'LR' and settings.SAVE_CLASSIFIER:
     clf = LogisticRegression()
     logger.log(clf)
     clf.fit(X_train,y_train)
-    logger.log("train error: " + str(clf.score(X_train, y_train)) )
-    logger.log("test error:  " + str(clf.score(X_test,  y_test)) )
+    logger.log("train score: " + str(clf.score(X_train, y_train)) )
+    logger.log("test score:  " + str(clf.score(X_test,  y_test)) )
 
-if args.clf == 'RF' and not settings.SAVE_CLASSIFIER:
+if args.clf == 'RF' and settings.SAVE_CLASSIFIER:
     # trees = [100, 200, 300, 400, 500]
     # trees = [600, 700, 800, 900]
     # trees = [ 500 ]
@@ -252,11 +252,3 @@ logger.log('RES:, AUC, ACC, PRE, TPR, F1, FNR' )
 logger.log('RES:,' + str(auc) + ',' + str(acc) + ',' + str(pre) + ',' + str(tpr) + ',' + str(f1) + ',' + str(fnr) )
 logger.log('<==========================================================================')
 
-# tn, fp, fn, tp = confusion_matrix(y_test, y_hat, labels=list(range(args.num_classes))).ravel()
-# tn, fp, fn, tp = confusion_matrix(y_test, y_hat, labels=list(range(args.num_classes))).ravel()
-
-aa, bb, cc, dd = perf_measure(y_test, y_hat)
-
-fpr, tpr, _ = roc_curve(y_test, y_hat_pr)
-print("fpr", fpr)
-print("tpr", tpr)

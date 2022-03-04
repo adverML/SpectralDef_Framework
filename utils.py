@@ -64,10 +64,12 @@ def save_args_to_file(args, path):
     
 
 def get_debug_info(msg):
-    frameinfo = getframeinfo(currentframe())
-    print(msg, ", filename: ", frameinfo.filename, ", line_nr: ", frameinfo.lineno)
+    if settings.SHOW_DEBUG:
+        # frameinfo = getframeinfo(currentframe())
+        # print(msg, ", filename: ", frameinfo.filename, ", line_nr: ", frameinfo.lineno)
+        print(msg)
 
-
+    
 def aa_get_mode(args):
     mode = 'std'
     if args.individual:
@@ -782,6 +784,15 @@ def get_model_info(args):
     return net, depth, widen_factor
 
 
+def check_args(args, logger):
+    if args.net_normalization:
+        if not args.attack == 'std' and not args.attack == 'ind':
+            logger.log("Warning: Net normalization must be switched off!")
+            args.net_normalization = False
+            logger.log("Warning: Net normalization is switched off now!")
+    return args
+
+
 def load_model(args):
 
     model = None
@@ -1008,7 +1019,8 @@ def load_test_set(args, preprocessing=None, IS_TRAIN=False):
             data_loader = get_dataloader("SmallImageNet", dataset_dir, is_train=IS_TRAIN, batch_size=args.batch_size, workers=num_workers, 
                             resolution=args.img_size, classes=settings.MAX_CLASSES_IMAGENET, preprocessing=preprocessing, shuffle=shuffle)
         elif args.img_size == 128: 
-            dataset_dir = os.path.join(settings.IMAGENET128_PATH, 'val/box') if IS_TRAIN else  os.path.join(settings.IMAGENET128_PATH, 'train/box')
+            # dataset_dir = os.path.join(settings.IMAGENET128_PATH, 'val/box') if IS_TRAIN else  os.path.join(settings.IMAGENET128_PATH, 'train/box')
+            dataset_dir = os.path.join(settings.IMAGENET128_PATH, 'val_data/box') if IS_TRAIN else  os.path.join(settings.IMAGENET128_PATH, 'train_data/box')
             # normalize = transforms.Normalize(mean=[0.4810, 0.4574, 0.4078], std=[0.2146, 0.2104, 0.2138])
 
             transform_list = [transforms.ToTensor()] + normalization

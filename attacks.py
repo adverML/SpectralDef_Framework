@@ -55,6 +55,9 @@ if __name__ == '__main__':
     logger = Logger(output_path_dir + os.sep + 'log.txt')
     log_header(logger, args, output_path_dir, sys) # './data/attacks/imagenet32/wrn_28_10/fgsm'
 
+    # check args
+    args = check_args(args, logger)
+    
     #load model
     logger.log('INFO: Load model...')
     model, preprocessing = load_model(args)
@@ -140,13 +143,13 @@ if __name__ == '__main__':
         #setup depending on attack
         if args.attack == 'fgsm':
             attack = FGSM()
-            epsilons = [0.03] 
+            epsilons = [8./255.] 
         elif args.attack == 'bim':
             attack = LinfBasicIterativeAttack()
-            epsilons = [0.03]
+            epsilons = [8./255.]
         elif args.attack == 'pgd':
             attack = PGD()
-            epsilons = [0.03]
+            epsilons = [8./255.]
         elif args.attack == 'df':
             attack = L2DeepFoolAttack()
             epsilons = None

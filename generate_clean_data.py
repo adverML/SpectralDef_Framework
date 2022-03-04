@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     parser.add_argument("--net",            default='cif10',        help=settings.HELP_NET)
     parser.add_argument("--img_size",       default=32,   type=int, help=settings.HELP_IMG_SIZE)
-    parser.add_argument("--num_classes",    default=1000, type=int, help=settings.HELP_NUM_CLASSES)
+    parser.add_argument("--num_classes",    default=10,   type=int, help=settings.HELP_NUM_CLASSES)
     parser.add_argument("--batch_size",     default=1   , type=int, help=settings.HELP_BATCH_SIZE)
     parser.add_argument("--wanted_samples", default=4000, type=int, help=settings.HELP_WANTED_SAMPLES)
 

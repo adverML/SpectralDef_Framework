@@ -1,8 +1,8 @@
 # Adversrial Machine Learning Benchmarks
 
 This code belongs to the papers: 
- * [Is RobustBench/AutoAttack a suitable Benchmark for Adversarial Robustness?](https://openreview.net/forum?id=aLB3FaqoMBs)
- * [Detecting AutoAttack Perturbations in the Frequency Domain](https://openreview.net/forum?id=8uWOTxbwo-Z)
+ * `AAAI 22` [Is RobustBench/AutoAttack a suitable Benchmark for Adversarial Robustness?](https://openreview.net/forum?id=aLB3FaqoMBs)
+ * `ICML 21` [Detecting AutoAttack Perturbations in the Frequency Domain](https://openreview.net/forum?id=8uWOTxbwo-Z)
 
 
 For this framework, please cite:
@@ -17,7 +17,8 @@ url={https://openreview.net/forum?id=aLB3FaqoMBs}
 }
 ```
 
-This repository is an expansion of https://github.com/paulaharder/SpectralAdversarialDefense, but has some **new features**:
+This repository is an expansion of [SpectralAdversarialDefense](https://github.com/paulaharder/SpectralAdversarialDefense), but has some **new features**:
+ * Automatic logging.
  * Several runs can be saved for calculating the variance of the results.
  * new attack method: AutoAttack.
  * datasets: imagenet32, imagenet64, imagenet128, imagenet, celebahq32, celebahq64, and celebahq128.
@@ -34,11 +35,11 @@ This repository is an expansion of https://github.com/paulaharder/SpectralAdvers
 
 This image shows the pipeline from training a model, generating adversarial examples to defend them. 
 
-1. Training: Models are trained. Pre-trained models are provided (WideResNet28-10: cif10, cif100, imagenet32, imagenet64, imagenet128, celebaHQ32, celebaHQ64, celebaHQ128; WideResNet51-2: ImageNet; VGG16: cif10 and cif100)
-2. Generate Clean Data: Only correctly classfied samples are stored via `torch.save`.
-3. Attacks: On this clean data severa atttacks can be executed: FGSM, BIM, AutoAttack (Std), PGD, DF and CW. 
-4. Detect Feature: Detectors try to distinguish between attacked and not-attacked images.
-5. Evaluation Detect: Is the management script for handling several runs and extract the results to one `.csv` file. 
+1. **Training**: Models are trained. Pre-trained models are provided (WideResNet28-10: cif10, cif100, imagenet32, imagenet64, imagenet128, celebaHQ32, celebaHQ64, celebaHQ128; WideResNet51-2: ImageNet; VGG16: cif10 and cif100)
+2. **Generate Clean Data**: Only correctly classfied samples are stored via `torch.save`.
+3. **Attacks**: On this clean data severa atttacks can be executed: FGSM, BIM, AutoAttack (Std), PGD, DF and CW. 
+4. **Detect Feature**: Detectors try to distinguish between attacked and not-attacked images.
+5. **Evaluation Detect**: Is the management script for handling several runs and extract the results to one `.csv` file. 
 
 
 ## Requirements
@@ -143,13 +144,21 @@ $ python attack.py --attack fgsm
 
 ### Build detector
 
-First extract the necessary characteristics to train a detector, choose a detector out of InputMFS (BlackBox - BB), InputPFS, LayerMFS (WhiteBox - WB), LayerPFS, LID, Mahalanobis adn an attack argument as before: 
+First extract the necessary characteristics to train a detector, choose a detector out of InputMFS (BlackBox - BB), InputPFS, LayerMFS (WhiteBox - WB), LayerPFS, LID, Mahalanobis adn an attack argument as before:
 
+```sh
+######## To Clarify from the Paper
+# InputMFS == BlackBox_MFS
+# InputPFS == BlackBox_PFS
+# LayerMFS == WhiteBox_MFS
+# LayerPFS == WhiteBox_PFS
+```
+
+Execute
 ```sh
 $ # python extract_characteristics.py -h  // for help
 $ python extract_characteristics.py --attack fgsm --detector InputMFS
 ```
-
 
 Then, train a classifier on the characteristics for a specific attack and detector:
 ```sh
