@@ -87,9 +87,12 @@ if __name__ == '__main__':
     success_rate = 0
     logger.log('INFO: Perform attacks...')
 
+    testset = torch.load(clean_data_path + os.sep + 'clean_data')[:args.all_samples]
+    logger.log("INFO: len(testset): {}".format(len(testset)))
+
     if args.attack == 'std' or args.attack == 'apgd-ce' or args.attack == 'apgd-t' or args.attack == 'fab-t' or args.attack == 'square':
         logger.log('INFO: Load data...')
-        testset = load_test_set(args)
+        # testset = load_test_set(args)
 
         sys.path.append("./submodules/autoattack")
         from submodules.autoattack.autoattack import AutoAttack as AutoAttack_mod
@@ -129,9 +132,6 @@ if __name__ == '__main__':
 
 
     elif args.attack == 'fgsm' or args.attack == 'bim' or args.attack == 'pgd' or args.attack == 'df' or args.attack == 'cw': 
-
-        testset = torch.load(clean_data_path + os.sep + 'clean_data')[:args.all_samples]
-        logger.log("INFO: len(testset): {}".format(len(testset)))
         
         test_loader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False)
 
