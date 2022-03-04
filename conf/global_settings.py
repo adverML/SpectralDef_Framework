@@ -38,7 +38,7 @@ WARN_DIR_EXISTS = "Directory already Exists! Do you want to continue?"
 
 
 # Weight Paths
-root_weights = "./data/weights/"
+root_weights = "./checkpoint/"
 CIF10_CKPT     = root_weights + 'CIF10_CKPT/wide_resnet_ckpt.pth'
 CIF10VGG_CKPT  = root_weights + 'CIF10VGG_CKPT/vgg_cif10.pth'
 CIF100VGG_CKPT = root_weights + 'CIF100VGG_CKPT/vgg_cif100.pth'
