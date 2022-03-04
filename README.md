@@ -106,10 +106,11 @@ Download and copy the weights into `data/datasets/`. In case of troubles, adapt 
 
 #### Model download
 
-To get the weights for all networks for CIFAR-10 and CIFAR-100, ImageNet and CelebaHQ download: 
+To get the weights for all networks for CIFAR-10 (WideResNet 28-10 is already in this repository) and CIFAR-100, ImageNet and CelebaHQ download: 
 
 1. [Kaggle Download Weights](https://www.kaggle.com/j53t3r/weights)
-2. Copy the weights into `data/weights/`.
+2. Copy the weights into `checkpoint/`.
+
 
 In case of troubles, adapt the paths in `conf/global_settings.py`. You are welcome to create an issue on Github.
 
