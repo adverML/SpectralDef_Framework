@@ -242,10 +242,10 @@ detectadversarialslayer ()
 # detectadversarialslayer
 
 # printn
-# genereratecleandata
+genereratecleandata
 attacks
-# extractcharacteristics
-# detectadversarials
+extractcharacteristics
+detectadversarials
 
 
 # python attacks.py --net cif10 --att std --batch_size 500 --eps 4./255.
